@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main()
+{
+ int n0,sm,pm;
+ sm=0;
+ pm=0;
+ scanf("%d\n",&n0);
+ for (int n=0;n<n0;n++){
+     int s,p;
+     scanf("%d:%d",&s,&p);
+     if(s>=sm){
+         sm=s;
+         pm=p;
+     }
+ }
+    printf("Buy wand with score \"%d\" costing \"%d\"",sm,pm);
+    return 0;
+}
