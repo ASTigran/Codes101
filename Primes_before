@@ -1,0 +1,23 @@
+#include<stdio.h>
+int cp(int x){
+ int g=0;
+ for(int i=2;i<=(x/2);i++){
+    if ((x%i)==0){
+        g++;
+        break;
+    }
+    else continue;
+  }
+  return g;
+}
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    for (int q=2;q<x;q++){
+        if (cp(q)==0){
+            printf("%d ",q);
+        }
+    }
+    return 0;
+}
