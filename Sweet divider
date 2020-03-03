@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int size(int sweet){
+      for (int size=(sweet-1);size>0;size--){
+          if ((sweet%size)==0){
+              return size;
+              break;
+          }
+      }
+}
+int main()
+{
+    int sweet;
+    scanf("%d",&sweet);
+    printf("%d",size(sweet));
+    //  Insert your code here.
+    return 0;
+}
