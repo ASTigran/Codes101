@@ -1,8 +1,12 @@
 #include <stdio.h>
-/*The king of Numberland wants to build a square-shaped fort. He has the material which can be used to lay the foundation of area A. You, his chief architect, have to suggest (you won't be laying out the foundation) if he can build such a fort. Note that the side of the fort should be integral.
+/*The king of Numberland wants to build a square-shaped fort. 
+He has the material which can be used to lay the foundation of area A. 
+You, his chief architect, have to suggest (you won't be laying out the foundation) if he can build such a fort. 
+Note that the side of the fort should be integral.
 
 Guideline: 
-Make sure that you code using FUNCTIONS to obtain maximum marks. YOU WILL LOSE MARKS IF THIS GUIDELINE IS NOT FOLLOWED  You cannot use math.h library for this. 
+Make sure that you code using FUNCTIONS to obtain maximum marks. YOU WILL LOSE MARKS IF THIS GUIDELINE IS NOT FOLLOWED  
+You cannot use math.h library for this. 
 
 Input Format:
 A single line containing positive integer n denoting the amount of material available.
@@ -11,7 +15,7 @@ Output Format:
 A single line containing side of the fort if it is possible to build such fort, otherwise -1.
 
 Constraints:
-1≤A≤106
+1≤A≤10^6
 
 Example:
 Input:
