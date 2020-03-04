@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+/*Write code to generate the following design. Such creations are often called "ASCII art". 
+Search for them online to learn more.
+
+We can reveal that only space, pipe, underscore, backslash and forward slash 
+characters were used to create this (i.e. no tab characters were used). We can also 
+reveal that there are 2 spaces between the vertical lines of the first two "I" characters
+and there are 4 spaces between the vertical lines of the "I" and "T" characters as well as 4 spaces
+between the vertical lines of the "T" and "K" characters.
+
+
+       __
+|  |    |    |/
+|  |    |    |\
+*/
+
+    printf("       __\n");
+    printf("|  |    |    |/\n");
+    printf("|  |    |    |\\\n");
+    return 0;
+}
