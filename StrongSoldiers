@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<math.h>
+/*Winter has come and the king of Numberland has to fight the real war. This war is against the mad king of Numberburg. 
+You are the chief army commander and you have to recruit the soldiers. A strong soldier is one whose Identity number is a strong number. You "accept" only the strong soldiers in the army.
+We define strong number as a number that is equal to the sum of cubes of its digits. 
+For example 0, 1, 153 (13+53+33=153) are strong numbers.
+
+Guideline: Make sure that you code using FUNCTIONS to obtain maximum marks. YOU WILL LOSE MARKS IF THIS GUIDELINE IS NOT FOLLOWED.
+
+INPUT:
+A single line consisting of a single non-negative integer n.
+
+OUTPUT:
+A single line containing “Accept” if the soldier is selected, otherwise “Reject”.
+
+CONSTRAINTS:
+0≤n≤104
+
+EXAMPLE:
+Input:
+153
+Output: Accept   */
+int isArmstrong(int n){
+    int a,b,c,d,x;
+    a=(n/1000);
+    b=(n/100)-(10*a);
+    c=(n/10)-((100*a)+(10*b));
+    d=n-((1000*a)+(100*b)+(10*c));
+    x= pow(a,3)+pow(b,3)+pow(c,3)+pow(d,3);
+    if (x==n){
+        return 0;
+    }    
+    else return 1;
+}
+
+int main()
+{
+ int n;
+ scanf("%d",&n);
+ if (isArmstrong(n)==0){
+     printf("Accept");
+ }
+ else printf("Reject");
+return 0;
+}
