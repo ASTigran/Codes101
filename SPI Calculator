@@ -1,0 +1,86 @@
+#include <stdio.h>
+
+int main() 
+{
+/*[Please read the problem statement as well as the other instructions carefully before attempting the problem,
+especially how inputs are to be given and how the output needs to be printed]
+Abhishek is a first-year student. He has always topped in his class and wants to do the same here.
+He came to know that his performance in IIT Kanpur is judged based on his Cumulative Performance Index (CPI). 
+Abhishek is too lazy to calculate his CPI and would like you to calculate his CPI given his expected grades in various subjects.
+
+CPI Calculation
+CPI is calculated as follows. Each letter grade (A, B, C, D, E, F) corresponds to some points out of 10.
+A - 10/10
+B - 8/10
+C - 6/10
+D - 4/10
+E - 2/10
+F - 0/10
+
+Also, each course has some associated credits which is used to calculate the total points awarded in that course. 
+So, if a course Course1 has 14 credits and a student scores ‘B’ grade in that course, then the student will be awarded 
+14 * 8 = 112 points for that course. 
+
+CPI = (Sum of total points in all courses) / (Sum of credits of all courses)
+
+For example, if a student takes 3 courses Course1, Course2, Course3 of 4, 3, 5 credits respectively, and scores grades B, C, A,
+Course1 4 B
+Course2 3 C
+Course3 5 A
+
+Then his CPI is calculated as follows:
+(4 * 8 + 3 * 6 + 5 * 10) / (4 + 3 + 5)
+
+Input
+Input consists of three lines. Each line consists of course specification in the following format
+  
+Each course name consists of exactly 3 characters and grade is represented in Capital letters.
+
+Constraints: 1 <= Credits <=100
+	         Grade ? {‘A’, ‘B’, ‘C’, ‘D’, ‘E’, ‘F’}
+
+
+Output
+Output the calculated cpi as a floating point number (upto 2 decimal places).
+
+Example
+Input 
+ESC 14 A
+MTH 11 B
+PHY 11 D
+Output  
+7.56
+
+Hint: Note that the course code consisting of three letters is not needed in the calculation of CPI so 
+the part of your code that reads the inputs needs to ignore these three letters somehow.*/
+
+    int c1,c2,c3,p1,p2,p3;
+    char g1,g2,g3;
+    scanf("%*c%*c%*c %d %c\n",&c1,&g1);
+    scanf("%*c%*c%*c %d %c\n",&c2,&g2);
+    scanf("%*c%*c%*c %d %c",&c3,&g3);
+    if(g1=='A') p1=10;
+    if(g1=='B') p1=8;
+    if(g1=='C') p1=6;
+    if(g1=='D') p1=4;
+    if(g1=='E') p1=2;
+    if(g1=='F') p1=0;
+    if(g2=='A') p2=10;
+    if(g2=='B') p2=8;
+    if(g2=='C') p2=6;
+    if(g2=='D') p2=4;
+    if(g2=='E') p2=2;
+    if(g2=='F') p2=0;
+    if(g3=='A') p3=10;
+    if(g3=='B') p3=8;
+    if(g3=='C') p3=6;
+    if(g3=='D') p3=4;
+    if(g3=='E') p3=2;
+    if(g3=='F') p3=0;
+
+
+    float cpi;
+    cpi=((p1*c1)+(p2*c2)+(p3*c3))/(float)(c1+c2+c3);
+    printf("%0.2f",cpi);
+    return 0;
+}
