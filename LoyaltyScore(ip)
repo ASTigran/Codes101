@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<math.h>
+int LoyaltyScore(long n){
+    int o,e,d;
+    o=0;
+    e=0;
+    d=floor(log10(n))+1;
+    for(int x=1;x<=d;x++){
+    int n1=n/10;
+    int a=n-(n1*10);
+      if ((a%2)==0){
+        e+=1;  
+      }
+      else o+=1;
+      n=n/10;
+    }
+	//  Insert your code here.
+    return (o-e);
+}
+int main()
+/*The king of Numberland is in search of a new chief advisor. Several candidates (numbers) have been coming to the royal palace 
+since the last few days. The king calls a well-known saint λ from the neighbouring village to help him shortlist
+candidates for the next round. In the first round, the king wants to test the candidate's loyalty. Saint λ, through years
+of penance, has become an expert in understanding a number's character. He asks the king to do the following : 
+Count the number of odd and even digits in the candidate (number). Then calculate the candidate's Loyalty score as follows:
+
+Loyalty score = (count of odd digits - count of even digits)
+
+
+The higher the value, more loyal is the candidate. 
+
+Help the king in writing a function to calculate a number's Loyalty score.
+
+Guideline : Make sure that you code using FUNCTIONS to obtain maximum marks. YOU WILL LOSE MARKS IF THIS GUIDELINE IS NOT FOLLOWED.
+
+INPUT:
+A single line consisting of a single non-negative integer n.
+
+OUTPUT:
+A single integer indicating the difference of the two counts.*/
+{
+  int n;
+  scanf("%d",&n);
+  printf("%d",LoyaltyScore(n));
+    //  Insert your code here.
+    
+	return 0;
+}
