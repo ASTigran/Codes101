@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 int LoyaltyScore(long n){
+    if (n==0) return -1;
     int o,e,d;
     o=0;
     e=0;
