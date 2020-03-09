@@ -1,0 +1,43 @@
+#include<stdio.h>
+/*A simple system of linear equations with three variables can be represented as:
+
+ax + by + cz = d
+ex + fy + gz = h
+ix + jy + kz = l
+
+It is possible to obtain explicit formulas to solve for x ,y and z, given the 12 coefficient
+values a through l, using Cramer's rule. Can you write a C program to solve any trivariate linear 
+equation systems of this nature using Cramer's rule? You can assume that only solvable equations will be given.
+
+Input:
+1 1 1 3
+1 -1 1 4
+1 2 3 6
+
+Assume all inputs to be integers.
+
+Output:
+x = 1.75, y = -0.50, z = 1.75
+
+Print output variables accurate to the second decimal place.*/
+
+int main()
+{
+    int a,b,c,d,e,f,g,h,i,j,k,l;
+    scanf("%d%d%d%d%d%d%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f,&g,&h,&i,&j,&k,&l);
+    float D,D1,D2,D3,x,y,z;
+    D=((a*f*k)-(a*g*j))+((b*g*i)-(b*e*k))+((c*e*j)-(c*i*f));
+    D1=((d*f*k)-(d*g*j))+((b*g*l)-(b*h*k))+((c*h*j)-(c*l*f));
+    D2=((a*h*k)-(a*g*l))+((d*g*i)-(d*e*k))+((c*e*l)-(c*i*h));
+    D3=((a*f*l)-(a*h*j))+((b*h*i)-(b*e*l))+((d*e*j)-(d*i*f));
+    x=(D1/D);
+    y=(D2/D);
+    z=(D3/D);
+    printf("x = %0.2f, y = %0.2f, z = %0.2f",x,y,z);
+    
+    
+    
+    
+    // enter solution code here
+    return 0;
+}
