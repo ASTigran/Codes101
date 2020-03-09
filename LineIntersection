@@ -1,0 +1,42 @@
+#include<stdio.h>
+/*Prof. X is an expert in geometrical maths. He tests you on this at the basic level. 
+Pass all of his test cases to show your expertise.
+You are given 2 lines of the form y=mx+c. Tell whether they intersect or not. 
+Print “INTERSECT” if they intersect at one point, “SAME” if they coincide, “PARALLEL” if they don’t intersect.
+
+INPUT:
+The first line contains 2 space-separated floating-point numbers, m1 and c1.
+The second line contains 2 space-separated floating-point numbers, m2 and c2.
+
+OUTPUT:
+Print a single line with “SAME”, “INTERSECT” or “PARALLEL” (without quotes).
+
+CONSTRAINTS:
+−1000≤m1,m2,c1,c2≤1000
+
+EXAMPLE:
+INPUT:
+10.0 1.2
+10.0 3.2
+OUTPUT:
+PARALLEL
+*/
+
+int main()
+{
+    float m1,m2,c1,c2;
+    scanf("%f %f\n",&m1,&c1);
+    scanf("%f %f",&m2,&c2);
+    if ((m1==m2)&&(c1==c2)){
+    printf("SAME");    
+    }
+    else if ((m1==m2)&&(c1!=c2)){
+        printf("PARALLEL");
+    }
+    else if (m1!=m2){
+        printf("INTERSECT");
+    }
+    //  Insert your code here.
+    
+    return 0;
+}
