@@ -1,0 +1,117 @@
+#include<stdio.h>
+#include<math.h>
+/*
+You have two friends T and Q. T specializes in classifying triangles and Q specializes in classifying quadrilaterals. 
+Both your friends are out and you are given the task of handling their clients. 
+Write a C program to automate this task. The user informs you whose client they are (T or Q), and accordingly gives 
+you 3 or 4 coordinate pairs respectively. Note that coordinate pairs are given in anti-clockwise order. Output the
+category of Triangle (Isosceles/Scalene) for T’s client and the category of quadrilateral (Square/Rectangle) for Q’s client.
+
+Note: In case of T, assume the points form a valid triangle (Isosceles/Scalene). 
+In case of Q, assume the quadrilateral is one of square or rectangle. 
+(Be specific: A square, although also a rectangle, should be classified as a square only.)
+
+INPUT:
+Input consists of 2 lines.
+First line is a single character, T or Q, telling whose client the user is. Second line consists of 
+3 or 4 pairs of floating-point numbers respectively. 
+In case of T : x1 y1 x2 y2 x3 y3
+In case of Q : x1 y1 x2 y2 x3 y3 x4 y4
+
+Note: A coordinate is identified by (xi,yi). 
+
+OUTPUT:
+The output consists of two lines.
+First-line contains a string identifying the shape's class. In case of T, “Isosceles” or “Scalene” 
+(without quotes). In case of Q, “Square” or “Rectangle” (without quotes).
+
+Second-line contains a single floating point number, rounded-off to 2 decimal places, 
+denoting the squared length of the longest side.
+
+CONSTRAINTS:
+−1000.0≤xi,yi≤1000.0
+
+EXAMPLE:
+INPUT:
+T
+0 0 3 0 0 3
+OUTPUT:
+Isoceles
+18.00
+
+INPUT:
+Q
+-10 0 10 0 10 5 -10 5
+OUTPUT:
+Rectangle
+400.00
+*/
+
+int main()
+{
+    char c;
+    scanf("%c\n",&c);
+    if (c=='T'){
+        float x1,x2,x3,y1,y2,y3;
+        scanf("%f %f %f %f %f %f",&x1,&y1,&x2,&y2,&x3,&y3);
+        float l1,l2,l3;
+        l1= pow(x1-x2,2)+pow(y1-y2,2);
+        l2= pow(x3-x2,2)+pow(y3-y2,2);
+        l3= pow(x1-x3,2)+pow(y1-y3,2);
+            if ((l1!=l2)&&(l3!=l2)&&(l1!=l3)){
+                printf("Scalene\n");
+                if ((l1>l2)&&(l1>l3)){
+                    printf("%0.2f",l1);
+                }
+                else if((l2>l1)&&(l2>l3)){
+                    printf("%0.2f",l2);
+                }
+                else if ((l3>l2)&&(l3>l1)){
+                    printf("%0.2f",l3);
+                }
+
+            }
+            else if ((l1==l2)||(l3==l2)||(l1==l3)){
+                printf("Isosceles\n");
+                 if ((l1>=l3)&&(l1>=l2)){
+                    printf("%0.2f",l1);
+                }
+                else if ((l2>=l1)&&(l2>=l3)){
+                    printf("%0.2f",l2);
+                }
+                else if ((l3>=l1)&&(l3>=l2)){
+                    printf("%0.2f",l3);
+                }
+                
+               
+
+                
+            }
+    }
+    else if (c=='Q'){
+        float x1,x2,x3,y1,y2,y3,x4,y4;
+        scanf("%f %f %f %f %f %f %f %f",&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4);
+        float l1,l2,l3,l4;
+        l1= pow(x1-x2,2)+pow(y1-y2,2);
+        l2= pow(x3-x2,2)+pow(y3-y2,2);
+        l3= pow(x4-x3,2)+pow(y4-y3,2);
+        l4= pow(x4-x1,2)+pow(y4-y1,2);
+            if ((l1==l2)&&(l3==l2)&&(l4==l3)&&(l1==l4)){
+                printf("Square\n");
+                printf("%0.2f",l1);
+            }
+            else {
+                printf("Rectangle\n");
+                 if (l1>l2){
+                     printf("%0.2f",l1);
+                    }
+                    else {
+                        printf("%0.2f",l2);
+                    }
+            }
+    }
+    
+    //  Insert your code here.
+    
+    return 0;
+}
