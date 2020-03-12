@@ -1,4 +1,26 @@
 #include<stdio.h>
+/*You were taught series in MTH101  along with epsilon-delta stories. They were summation of terms of a sequence.
+As you have progressed to a new semester, Prutor wants you to sum up series. The time has come to put your math 
+skills at rest 'for a while'. Use your newly acquired C skills. No marks for solving by computing overall
+formula, problem is much simpler with advanced recent knowledge!
+Hint : Make your program proceed by creating and adding each number in the order it is written below.
+
+Input : A positive integer n
+Output : Print the sum of the series : 
+1 + (2+2) + (3+3+3) + ..... + (n + n + n ....+n) 
+
+Example
+Input
+2
+
+Output
+5
+
+Input Constraints:
+1≤ n ≤100
+*/
+
+
 int main(){
     int n,i,j,count;
     count=0;
