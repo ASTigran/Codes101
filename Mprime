@@ -1,0 +1,43 @@
+#include <stdio.h>
+/*In this problem we define a special type of numbers called m-primes.
+A number n is called m prime if it has exactly m distinct non trivial factors (i.e. factors excluding 1 and itself). 
+
+For example, 10 is 2-prime since it has exactly two factors i.e 2 and 5. Similarly, 9 is 1-prime since it has only one factor i.e. 3.
+
+Your task is to take m and n as input and check whether n is m-prime or not. If n is m-prime print YES otherwise print NO.
+
+Example 1:
+Input:
+2 10
+
+Output:
+YES
+
+Example 2:
+Input:
+2 9
+
+Output:
+NO
+
+Note: Using arrays is neither required nor recommended.
+*/
+
+int main(){
+  int m,n,count,a,b;
+  scanf("%d %d",&m,&n);
+  count=0;
+  for(a=2;a<n;a++){
+      if((n%a)==0){
+          count++;
+      }
+  }
+  if (count==m){
+      printf("YES");
+  }
+  else{
+      printf("NO");
+  }
+ 
+return 0;
+}
