@@ -1,0 +1,60 @@
+#include<stdio.h>
+char way(int n){
+    if ((n%2)==0){
+        return 'L';
+    }
+    else if ((n%3)==0){
+        return 'R';
+    }
+    else return 'S';
+}
+/*Harry and Ron are looking to meet Hagrid’s friend Aragog (his pet spider). Hagrid advised them 
+that spiders are curious and intelligent creatures and they can follow them to achieve what they want.
+
+They start following the spider’s trail in The Forbidden Forest, they notice that the trail sometimes split
+into multiple trails and at this point they are not sure to follow which one as they all go in different directions. 
+They recall something Hagrid told them about spiders.
+
+If the trail of spiders splits into a number x, if the number x is divisible by 2 then you follow 
+the leftmost trail, else if the number x is divisible by 3 then you follow the rightmost trail, else
+you follow the original trail (go straight).
+
+INPUT:
+First line contains the number N of splits found while following the trail,
+Second line contains N space-separated integers each denoting the number x of one of the splits.
+
+OUTPUT:
+N space-separated characters (either L, S or R) denoting the left, straight or right respectively.
+
+EXAMPLE:
+
+INPUT:
+5
+22 15 7 11 8
+
+OUTPUT:
+L R S S L
+
+Explanation:
+22 - divisible by 2, hence L (left).
+15 - divisible by 3, hence R (right).
+7 - not divisible by 2 or 3, hence S (straight).
+11 - not divisible by 2 or 3, hence S (straight).
+8 - divisible by 2, hence L (left).
+
+Note: Few marks will be reserved for good programming practices.
+*/
+
+int main()
+{
+    int n;
+    scanf("%d\n",&n);
+    for (int i=0;i<n;i++){
+        int x;
+        scanf("%d ",&x);
+        printf("%c ",way(x));
+    }
+    //  Insert your code here.
+    
+    return 0;
+}
