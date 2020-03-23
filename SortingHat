@@ -1,0 +1,75 @@
+#include<stdio.h>
+/*This is your first day at Hogwarts School of Witchcraft and Wizardry, you are taken to a dining room 
+where each member of the school sits to eat and, here, you will be assigned one of the four houses 
+(Gryffindor, Slytherin, Ravenclaw and Hufflepuff) by the Sorting Hat.
+The Sorting Hat goes through your mind and picks the house based on the numbers that are going
+through your mind, it picks the 2 numbers you are thinking of the most and does the following:
+
+- If the 2 numbers are even and second divides the first one - Gryffindor
+- If the 2 numbers are odd and second divides the first one - Slytherin
+- If one number is even, other one is odd and second divides the first one - Ravenclaw
+- Otherwise - Hufflepuff
+
+You will be given a list of pairs (a pair will have 2 space-separated numbers) and you will have
+to assign him/her the correct house.
+
+INPUT:
+The first line contains an integer N - denoting the number of pairs in the list.
+The next N lines have 2 space-separated integers each denoting a single pair (in each line).
+
+OUTPUT:
+Each line should contain a single house name (out of the 4) denoting the house
+assigned to the pair corresponding to that line.
+
+EXAMPLE:
+
+INPUT:
+5
+6 2
+3 1
+9 2
+25 5
+18 9
+
+OUTPUT:
+Gryffindor
+Slytherin
+Hufflepuff
+Slytherin
+Ravenclaw
+
+Explanation:
+Simply follow the rules mentioned in the question for each test case and you'll get the result.
+
+Note: Few marks will be reserved for good programming practices.
+
+*/
+int main()
+{
+    int n0;
+    scanf("%d\n",&n0);
+    for(int i=0;i<n0;i++){
+        int a,b,c,d,e;
+        scanf("%d %d \n",&a,&b);
+        c=a%2;
+        d=b%2;
+        e=a%b;
+        if ((c==0)&&(d==0)&&(e==0)){
+            printf("Gryffindor\n");
+        }
+        else if ((c!=0)&&(d!=0)&&(e==0)){
+            printf("Slytherin\n");
+        }
+        else if ((c==0)&&(d!=0)&&(e==0)){
+            printf("Ravenclaw\n");
+        }
+        else if ((c!=0)&&(d==0)&&(e==0)){
+            printf("Ravenclaw\n");
+        }
+        else printf("Hufflepuff\n");
+    }
+    
+    //  Insert your code here.
+    
+    return 0;
+}
