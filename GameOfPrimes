@@ -1,0 +1,28 @@
+#include<stdio.h>
+int p(int x){
+    int g=0;
+    for (int i=2;i<=(x/2);i++){
+        if ((x%i)==0)g++; 
+    }
+    return g;
+}
+int love(int x,y){
+    if ((p(x)==0)&&(p(y)==0)){
+        return x+y;
+    }
+    else if ((p(x)==0)&&(p(y)!=0)){
+        return x;
+    }
+    else if ((p(x)!=0)&&(p(y)==0)){
+        return y;
+    }
+    else return (x*y);
+}
+int main()
+{
+    int x,y;
+    scanf("%d %d",&x,&y);
+    printf("%d",love(x,y));
+    
+    return 0;
+}
