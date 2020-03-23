@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<math.h>
+float a(float n1,float n2,float r1,float r2,float a1,float a2){
+    float area= n1*(r2-a2)+r1*(a2-n2)+a1*(n2-r2);
+    return area;
+    }
+float d(float n1,float n2,float r1,float r2,float a1,float a2){
+    float d1= pow(n1-r1,2)+pow(n2-r2,2);
+    float d2= pow(a1-r1,2)+pow(a2-r2,2);
+    float d3= pow(n1-a1,2)+pow(n2-a2,2);
+    if ((d1>d2)&&(d1>d3)){
+        return d1;
+    }
+    if ((d2>d1)&&(d2>d3)){
+        return d2;
+    }
+    if ((d3>d2)&&(d3>d1)){
+        return d3;
+    }
+    }
+      
+int main()
+{
+    float n1,n2,r1,r2,a1,a2;
+    scanf("%f %f\n",&n1,&n2);
+    scanf("%f %f\n",&r1,&r2);
+    scanf("%f %f",&a1,&a2);
+    if (a(n1,n2,r1,r2,a1,a2)==0) printf("Yes\n");
+    else printf("No\n");
+    printf("%0.2f",d(n1,n2,r1,r2,a1,a2));
+    return 0;
+}
