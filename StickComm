@@ -29,4 +29,5 @@ int main()
     else printf("No\n");
     printf("%0.2f",d(n1,n2,r1,r2,a1,a2));
     return 0;
+    
 }
