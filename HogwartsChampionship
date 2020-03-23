@@ -1,0 +1,65 @@
+#include<stdio.h>
+
+int main()
+{
+    int events;
+    scanf("%d\n",&events);
+    int g,s,h,r;
+    g=0;
+    s=0;
+    h=0;
+    r=0;
+    for(int i=0;i<events;i++){
+        int k;
+        scanf("%d",&k);
+        g+=k;
+    } 
+    scanf("\n");
+    for(int i=0;i<events;i++){
+        int k;
+        scanf("%d",&k);
+        s+=k;
+    } 
+    scanf("\n");
+    for(int i=0;i<events;i++){
+        int k;
+        scanf("%d",&k);
+        r+=k;
+    } 
+    scanf("\n");
+    for(int i=0;i<events;i++){
+        int k;
+        scanf("%d",&k);
+        h+=k;
+    } 
+    int arr[4]={g,s,r,h};
+    int assign;
+    int max=0;
+    for(int i=0;i<4;i++){
+        if (arr[i]>max){
+            assign=i;
+            max=arr[i];
+        }
+        if (arr[i]==max){
+            if (i>assign){
+                assign=i;
+                max=arr[i];
+            }
+        }
+    }
+    switch(assign){
+    case 0:printf("Gryffindor");
+    break;
+    case 1:printf("Slytherin");
+    break;
+    case 2:printf("Ravenclaw");
+    break;
+    case 3:printf("Hufflepuff");
+    break;
+    }
+    
+    
+    //  Insert your code here.
+    
+    return 0;
+}
