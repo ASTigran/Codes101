@@ -1,0 +1,54 @@
+#include<stdio.h>
+char d(char c,int i){
+int j=i%26;    
+    if (c>=97){
+        if ((c+j)<123){
+            return c+j;
+        }
+        else return c+j-26;
+    }
+    else {
+        if ((c+j)<91){
+            return c+j;
+        }
+        else return c+j-26;
+    }
+}
+char e(char c,int i){
+    int j=i%26;    
+    if (c>=97){
+        if ((c+j)<123){
+            return c+j;
+        }
+        else return c+j-26;
+    }
+    else {
+        if ((c+j)<91){
+            return c+j;
+        }
+        else return c+j-26;
+    }
+}
+int main()
+{
+    int n;
+    char q;
+    scanf("%d\n%c\n",&n,&q);
+    if (q=='E'){
+        char c;
+        while(c!=EOF){
+            c=getchar();
+            c=e(c,n);
+            putchar(c);
+    }
+    }
+    if (q=='D'){
+        char c;
+        while(c!=EOF){
+            c=getchar();
+            c=d(c,n);
+            putchar(c);
+    }
+    }
+    return 0;
+}
