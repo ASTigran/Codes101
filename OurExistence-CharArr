@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+    int n;
+    int count=0;
+    scanf("%d",&n);
+    char arr[n];
+    for(int i=0;i<n;i++){
+        scanf("%c",&arr[i]);
+        if ((arr[i]>64)&&(arr[i]<91)){
+        printf("Yes");
+        count++;
+        break;
+        } 
+        if ((arr[i]>96)&&(arr[i]<123)){
+        printf("Yes");
+        count++;
+        break;
+        }
+      
+    }
+    if (count==0) printf("No");  
+    //  Insert your code here.
+    
+    return 0;
+}
