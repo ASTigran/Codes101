@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int main()
+{
+   for(int i=0;i<5;i++){
+       char c;
+       scanf("%c",&c);
+       int a=c-65;
+       int b=((a*a)+(4*a)+5)%26;
+       printf("%c",b+65);
+   }
+    /* Long way: char a,b,c,d,e;
+    scanf("%c%c%c%c%c",&a,&b,&c,&d,&e);
+    int a1=a-65;
+    int n1=((a1*a1)+(4*a1)+5)%26;
+    printf("%c",n1+65);
+    int a2=b-65;
+    int n2=((a2*a2)+(4*a2)+5)%26;
+    printf("%c",n2+65);
+    int a3=c-65;
+    int n3=((a3*a3)+(4*a3)+5)%26;
+    printf("%c",n3+65);
+    int a4=d-65;
+    int n4=((a4*a4)+(4*a4)+5)%26;
+    printf("%c",n4+65);
+    int a5=e-65;
+    int n5=((a5*a5)+(4*a5)+5)%26;
+    printf("%c",n5+65);
+    */
+    return 0;
+}
