@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main()
+{
+    int I,L,A;
+    scanf("%d%d%d",&I,&L,&A);
+    int P=((I*I)*100*L)/A;
+    printf("%d",P);
+    //  Insert your cod
+    
+    return 0;
+}
