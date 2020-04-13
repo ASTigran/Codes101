@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main()
+{
+    int m1,m2,v1,v2,v;
+    scanf("%d%d\n%d%d",&m1,&m2,&v1,&v2);
+    v=(m1*v1+m2*v2)/(m1+m2);
+    printf("%d",v);
+    
+    //  Insert your code here.
+    
+    return 0;
+}
