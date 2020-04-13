@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    float cA,cB,cC;
+    cA=(float)((b*b)+(c*c)-(a*a))/(2*b*c);
+    cB=(float)((a*a)+(c*c)-(b*b))/(2*a*c);
+    cC=(float)((b*b)+(a*a)-(c*c))/(2*b*a);
+    printf("%0.2f %0.2f %0.2f",cA,cB,cC);
+    //  Insert your code here.
+    
+    return 0;
+}
