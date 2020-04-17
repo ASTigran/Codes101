@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main()
+{
+    float a,b,c,x1,x2,y1,y2;
+    scanf("%f%f%f%f%f%f%f",&a,&b,&c,&x1,&y1,&x2,&y2);
+    float v1,v2,v3;
+    v1=(a*x1)+(b*y1)+c;
+    v2=(a*x2)+(b*y2)+c;
+    v3=v1*v2;
+    if (v3>0) printf("HAPPY");
+    else printf("SAD");
+    return 0;
+}
