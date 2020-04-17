@@ -19,7 +19,7 @@ int main()
             printf("Division by zero!");        
             
         }
-        printf("%0.3f",a/b);
+      else  printf("%0.3f",a/b);
     }
     else {
         printf("Not supported!");
