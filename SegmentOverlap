@@ -4,14 +4,11 @@ int main()
 {
     float a1,a2,b1,b2;
     scanf("%f%f%f%f",&a1,&a2,&b1,&b2);
-    if ((a2>b1)&&(b1>a1)){
+    if ((a2>b1)&&(b1>a1)&&(b2>a2)){
         printf("%0.2f",a2-b1);
     }
-    else if ((b2>a1)&&(a1>b1)){
+    else if ((b2>a1)&&(a1>b1)&&(a2>b2)){
         printf("%0.2f",b2-a1);
-    }
-    else if ((a1==b1)&&(a2==b2)){
-        printf("%0.2f",a1-a2);
     }
     else if ((a1==b1)&&(a2>b2)){
         printf("%0.2f",b2-b1);
@@ -25,7 +22,12 @@ int main()
     else if ((a2==b2)&&(b1>a1)){
         printf("%0.2f",b2-b1);
     }
-    
+    else if ((b2>a1)&&(a1>b1)&&(a2<b2)){
+        printf("%0.2f",a2-a1);
+    }
+    else if ((a2>b1)&&(b1>a1)&&(b2<a2)){
+        printf("%0.2f",b2-b1);
+    }
     else printf("0.00"); 
     return 0;
 }
