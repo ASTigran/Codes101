@@ -1,46 +1,4 @@
 #include<stdio.h>
-/*Naman loves maths and asks Pragya to challenge him by giving him different tasks to perform.
-After completing his task, he bugs her to check his answers. Pragya is very busy and wants
-your help to automate the task of checking Naman’s answers. Help Pragya by designing a simple 
-calculator-like application which takes a code corresponding to an operation, and then prompts the user 
-to enter the appropriate number of arguments. Finally, it outputs the result.
-
-Codes correspond to the following operations : 
-
-1 : Takes two floating-point numbers and prints average of the two.
-2 : Takes two floating-point numbers and prints absolute difference of the two.
-3 : Takes a floating-point number and prints the result obtained by incrementing it by 1.
-4 : Takes a floating-point number and prints its square.
-Else print “Operation not supported!”
-
-Note: Do not use any math.h library functions
-
-INPUT:
-Input consists of 2 lines.
-First line consists of an integer corresponding to an operation code, opcode.
-Second line consists of an appropriate number of floating-point numbers (ni) for that operation.
-
-OUTPUT:
-A single line containing the result or the error message (in case of invalid operation code).
-Note: Round all results to 3 decimal places.
-
-CONSTRAINTS:
-−1000.0≤ni≤1000.0
-0≤opcode≤100
-
-EXAMPLE:
-INPUT:
-1
-5.1 2.6
-OUTPUT: 
-3.850
-
-INPUT:
-3
-4.5
-OUTPUT:
-5.500
-*/
 
 
 int main()
