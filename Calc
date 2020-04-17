@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main()
+{
+    float a,b;
+    char op;
+    scanf("%f%f\n%c",&a,&b,&op);
+    if (op=='+'){
+        printf("%0.3f",a+b);
+    }
+    else if (op=='-'){
+        printf("%0.3f",a-b);
+    }
+    else if (op=='*'){
+        printf("%0.3f",a*b);
+    }
+    else if (op=='/'){
+        if (b==0){
+            printf("Division by zero!");        
+            
+        }
+        printf("%0.3f",a/b);
+    }
+    else {
+        printf("Not supported!");
+    }
+    //  Insert your code here.
+    
+    return 0;
+}
