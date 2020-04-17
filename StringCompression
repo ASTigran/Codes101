@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int main()
+{
+    char a,b,c,d,e;
+    scanf("%c%c%c%c%c",&a,&b,&c,&d,&e);
+    int k0;
+    scanf("\n%d",&k0);
+    int k=k0%26;
+    int v1,w1,x1,y1,z1;
+    v1=a-65;
+    w1=b-65;
+    x1=c-65;
+    y1=d-65;
+    z1=e-65;
+    int v2,w2,x2,y2,z2;
+    if ((v1+k)<=25) v2=v1+k;
+    else v2=(v1+k)-26;
+    if ((w1+k)<=25) w2=w1+k;
+    else w2=(w1+k)-26;
+    if ((x1+k)<=25) x2=x1+k;
+    else x2=(x1+k)-26;
+    if ((y1+k)<=25) y2=y1+k;
+    else y2=(y1+k)-26;
+    if ((z1+k)<=25) z2=z1+k;
+    else z2=(z1+k)-26;
+    int o=(v2+w2+x2+y2+z2)%26;
+    printf("%c",o+65);
+    //  Insert your code here.
+    
+    return 0;
+}
