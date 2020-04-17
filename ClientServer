@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+  int err;
+  scanf("%d",&err);
+  int a;
+  a=err/100;
+  if (a==1) {printf("informational response");}
+  else if (a==2) {printf("successful");}
+  else if (a==3) {printf("redirection");}
+    else if (a==400) { printf("client error\n");
+    printf("Bad Request");}
+    else if (err==401){  printf("client error\n");
+    printf("Unauthorised");}
+    else if (err==402){ printf("client error\n");
+    printf("Payment Required");}
+    else if (err==403){  printf("client error\n");
+    printf("Forbidden");}
+    else if (err==404){  printf("client error\n");
+    printf("Not Found");}
+    else if ((err>404)&&(err<500)){  printf("client error\n");
+    printf("Unknown");}
+   
+  else if (a==5){ printf("server error");}
+    return 0;
+}
