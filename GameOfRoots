@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main()
+{
+    float a,b,c,d;
+    scanf("%f%f%f",&a,&b,&c);
+    d=(b*b)-(4*a*c);
+    if(d==0)printf("REAL BUT SAME");
+    else if (d>0)printf("REAL AND DISTINCT");
+    else if(d<0)printf("IMAGINARY");
+    
+    //  Insert your code here.
+    
+    return 0;
+}
