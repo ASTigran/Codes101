@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main()
+{
+    long lx1,lx2,ly1,ly2,rx1,rx2,ry1,ry2,ar;
+    scanf("%ld %ld %ld %ld",&lx1,&ly1,&rx1,&ry1);
+    scanf("\n %ld %ld %ld %ld",&lx2,&ly2,&rx2,&ry2);
+    if ((lx1>rx2||lx2>rx1)||(ry2>ly1||ry1>ly2)){
+        ar=((rx1-lx1)*(ly1-ry1))+((rx2-lx2)*(ly2-ry2));
+        printf("%ld",ar);
+    }
+    else printf("Overlap");
+    
+    return 0;
+}
