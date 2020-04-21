@@ -1,38 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-/*Today is your First Flying class, and your first task is to command your broom to raise up to your hand.
-Professor Rolanda Hooch has instructed that saying a “Good Broom Number” along with the command 
-will increase your chances of succeeding.
 
-A “Good Broom Number” is the smallest number greater than or equal to the number printed on the broom 
-such that the (sum of digits of this number) and
-(1 + absolute difference of sum of digits at odd and even places respectively) both divide the number itself.
-
-Suppose the number printed on the broom is 123, then the “Good Broom Number” for 123 is 126, since 126
-is the smallest number greater than or equal to 123 such that its (sum of digits) 
-i.e. 9 and (1 + absolute difference of sum of digits at odd and even places respectively)
-i.e. 6, both divide the number itself i.e. 126.
-
-INPUT:
-One line containing the number printed on the broom.
-
-OUTPUT:
-Print the line - "result" up
-Where "result" is the Good Broom Number
-
-EXAMPLE:
-
-INPUT:
-123
-
-OUTPUT:
-126 up
-
-Explanation:
-126 is the smallest number greater than or equal to 123 such that its (sum of digits) i.e. 9 and (1 + absolute difference of sum of digits at odd and even places respectively) i.e. (1 + (7 - 2)) = 6, both divide the number itself i.e. 126.
-
-Note: Few marks will be reserved for good programming practices.
-*/
 int sumd(int n){
     int sum=0;
     while(n>0){
