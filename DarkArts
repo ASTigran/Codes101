@@ -1,0 +1,162 @@
+#include<stdio.h>
+
+int main()
+{
+    char x;
+    double p1,p2;
+    p1=100;
+    p2=100;
+    while(1){
+        scanf("%c",&x);
+        if(x=='C'){
+           int n;
+           char y,z;
+           scanf("%c%d%c\n",&y,&n,&z);
+           if(y=='u'){
+               if(n==1){
+                   if(z=='S'){
+                       p2=p2-((0.4)*p2);
+                   }
+                   else if(z=='B'){
+                       p1=p1-((0.4)*p1);
+                   }
+               }
+               else if (n==2){
+                   if(z=='S'){
+                       p1=p1-((0.4)*p1);
+                   }
+                   else if(z=='B'){
+                       p2=p2-((0.4)*p2);
+                   }
+               }
+           }
+           else if(y=='h'){
+               if(n==1){
+                   if(z=='S'){
+                       p2=p2-((0.15)*p2);
+                   }
+                   else if(z=='B'){
+                       p1=p1-((0.05)*p1);
+                   }
+               }
+               else if (n==2){
+                   if(z=='S'){
+                       p1=p1-((0.15)*p1);
+                   }
+                   else if(z=='B'){
+                       p2=p2-((0.05)*p2);
+                   }
+               }
+           }
+        }
+        else break;
+    }
+    int w;
+    char o;
+    scanf("%c%d",&o,&w);
+     if(w==1){
+                if(p1>(1.5)*p2){
+                    printf("%d\n%0.2lf\n%0.2lf",1,p1,p2);
+                }
+                else {
+                    printf("%d\n%0.2lf\n%0.2lf",2,p1,p2);
+                }
+            }
+            else if(w==2){
+                if(p2>(1.5)*p1){
+                    printf("%d\n%0.2lf\n%0.2lf",2,p1,p2);
+                }
+                else {
+                    printf("%d\n%0.2lf\n%0.2lf",1,p1,p2);
+                }
+            }
+    //  Insert your cod
+    
+    return 0;
+}
+
+
+/*ALITER
+#include<stdio.h>
+
+int main()
+{
+    char x;
+    double p1,p2;
+    p1=100;
+    p2=100;
+    while(1){
+        scanf("%c",&x);
+        if(x=='C'){
+           int n;
+           char y,z;
+           scanf("%c%d%c\n",&y,&n,&z);
+           if(y=='u'){
+               if(n==1){
+                   if(z=='S'){
+                       p2=p2-((0.4)*p2);
+                   }
+                   else if(z=='B'){
+                       p1=p1-((0.4)*p1);
+                   }
+               }
+               else if (n==2){
+                   if(z=='S'){
+                       p1=p1-((0.4)*p1);
+                   }
+                   else if(z=='B'){
+                       p2=p2-((0.4)*p2);
+                   }
+               }
+           }
+           else if(y=='h'){
+               if(n==1){
+                   if(z=='S'){
+                       p2=p2-((0.15)*p2);
+                   }
+                   else if(z=='B'){
+                       p1=p1-((0.05)*p1);
+                   }
+               }
+               else if (n==2){
+                   if(z=='S'){
+                       p1=p1-((0.15)*p1);
+                   }
+                   else if(z=='B'){
+                       p2=p2-((0.05)*p2);
+                   }
+               }
+           }
+        }
+        else if(x=='E'){
+            char y;
+            int n;
+            scanf("%c%d\n",&y,&n);
+            if(n==1){
+                if(p1>(1.5)*p2){
+                    printf("%d\n%0.2lf\n%0.2lf",1,p1,p2);
+                    break;
+                }
+                else {
+                    printf("%d\n%0.2lf\n%0.2lf",2,p1,p2);
+                    break;
+                }
+            }
+            else if(n==2){
+                if(p2>(1.5)*p1){
+                    printf("%d\n%0.2lf\n%0.2lf",2,p1,p2);
+                    break;
+                }
+                else {
+                    printf("%d\n%0.2lf\n%0.2lf",1,p1,p2);
+                    break;
+                }
+            }
+        }
+        else break;
+    }
+    //  Insert your cod
+    
+    return 0;
+}
+*/
