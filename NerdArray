@@ -1,0 +1,46 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,x=0;
+    scanf("%d\n",&n);
+    int arr[n];
+    //scanning array
+    int i;
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    //testing for conditions now
+    for (int j=0;j<n;j++){
+        if (arr[j]>n){
+            x++;
+        }
+        if (arr[j]<1){
+            x++;
+        }
+    }
+    for(int a=0;a<n;a++){
+        for(int b=0;b<a;b++){
+            if (arr[b]==arr[a]){
+                x++;
+            }
+        }
+    }
+    int m;
+    for (m=1;m<n;){
+        if (arr[m]>arr[m-1]){
+            m++;
+        }
+        else break;
+        if (m==(n-1)){
+            x++;
+        }
+    }
+    if (x==0){
+    printf("Yes");
+    }
+    else {
+        printf("No");
+    }
+    return 0;
+}
