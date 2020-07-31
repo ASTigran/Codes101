@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,x;
+    scanf("%d\n%d",&n,&x);
+    int b,p,mp;
+    b=x;
+    mp=0;
+    for(int i=1;i<n;i++){
+        scanf("%d",&x);
+        if(b>x)b=x;
+        else if(b<x){
+            p=x-b;
+            if(p>mp)mp=p;
+            }
+    }
+    if(mp>0)printf("%d",mp);
+    else printf("%d",-1);
+    
+    
+    return 0;
+}
